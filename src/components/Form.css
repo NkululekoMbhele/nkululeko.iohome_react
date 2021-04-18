@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    --primary: #000814;
+    --white: #fff;
+    --yellow: #FFD60A;
+    --secondary: #001D3D;
+}
+
+.form-container {
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.form-element {
+    display: flex;
+    flex-flow: column-reverse;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.form-textarea,
+.form-input {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid gray;
+    width: 350px;
+    outline: none;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    height: 18px;
+    z-index: 2;
+    font-size: 15px;
+}
+
+.form-label {
+    position: absolute;
+    top: 0;
+    opacity: 0.5;
+    left: 0px;
+    font-size: 12px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.205);
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-textarea {
+    height: 80px;
+}
+
+.form-submit {
+    padding: 10px 30px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+@media screen and (max-width: 768px) {
+    .form-container {
+        padding-top: 60px;
+        margin-bottom: -30px;
+    }
+    .form-input,
+    .form-textarea {
+        width: 250px;
+    }
+    .form-submit input {
+        padding: 8px 20px;
+    }
+}
